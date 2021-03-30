@@ -1,0 +1,24 @@
+Main difference between grid and flexbox is: Grid is a 2 dimensional system while flexbox is only 1
+
+Repeat function is repeat(num of rows/columns , dimensions of them)
+
+Minmax function can be used to set min and max values for a grid box. Minmax(minimum, maximum)
+
+Auto-fill can be used to automatically fill up empty space when adjusting the viewport.
+Ex: grid-template-columns: repeat(auto-fill, 300px)
+
+Auto-fit can be used to automatically fill up the grid columns/rows.
+Ex. grid-template-columns: repeat(auto-fit, 300px)
+
+Grid column/row lines can be named by using square brackets [].
+Ex: grid-template-columns: [col-start] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+
+Any extra/undefined rows (rows that are implicitly defined) can be defined by using grid-auto-columns/rows.
+
+grid-auto-flow can be set to column or row, to automatically place new items in a column or row
+
+grid-auto-flow: dense will fill empty space between objects. Can also be set to row-dense or column-dense
+
+Child settings:
+
+grid-column can be used to place children at exact places on a grid. Ex: grid-column: 10/11 will start this item at column 10 and end it at 11

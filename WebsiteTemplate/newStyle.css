@@ -1,0 +1,305 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+body {
+  background-color: #fff;
+  color: #000;
+  overflow-wrap: break-word;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+}
+
+header {
+  margin: 30px;
+  display: grid;
+  grid-template-columns: 3fr 3fr 2fr 1fr;
+  grid-template-rows: repeat(3, 33%);
+  padding-bottom: 5vh;
+}
+
+.hidden {
+  display: none;
+}
+
+.site-contents {
+  margin: 3vh;
+}
+
+/* HEADER LINKS AND BUTTONS */
+
+.links {
+  display: flex;
+}
+.links-desktop {
+  display: none;
+  padding-right: 10px;
+}
+
+.social-links {
+  display: flex;
+}
+.btn-social-link {
+  padding: 0px 10px;
+  display: none;
+}
+
+@media only screen and (min-width: 862px) {
+  .mobile-links-opener {
+    display: none;
+  }
+
+  .links-desktop {
+    display: block;
+  }
+
+  .btn-social-link {
+    display: block;
+  }
+}
+
+.shopping-cart {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
+}
+.cart-number {
+  font-size: 12px;
+  padding: 2px;
+  grid-column: 2;
+}
+
+.title-div {
+  text-align: center;
+  font-size: calc((2 - 1) * 1.2vh + 1rem);
+}
+
+/* SITE CONTENTS */
+
+.products {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 862px) {
+  .products {
+    flex-direction: row;
+  }
+
+  .clothes-container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media only screen and (min-width: 586px) {
+  .product-links {
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.233);
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.product-links {
+  display: flex;
+}
+.prod-link-div {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.sale {
+  border-right: 1px solid rgba(189, 162, 162);
+  border-left: 1px solid rgba(189, 162, 162);
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.products {
+  margin-bottom: 15vh;
+}
+
+.product-pic img {
+  width: 100%;
+  overflow: hidden;
+}
+
+.product-name-color {
+  display: grid;
+}
+
+.product-pic {
+  margin: 3vh 0 1px 0;
+}
+.item-slash-color {
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-sale {
+  text-align: end;
+}
+.sale-price {
+  display: flex;
+}
+.product-price-sale {
+  color: rgba(189, 162, 162, 0.6);
+}
+
+/* LOOKBOOKS */
+
+.lookbooks-div {
+  width: auto;
+  height: 20vh;
+}
+.lookbooks-div p {
+  text-align: center;
+}
+.lookbooks-div a {
+  color: #a8a6a1;
+  text-decoration: underline;
+  font-size: 4vh;
+  text-align: center;
+  justify-content: center;
+}
+
+/* SOCIAL LINKS */
+
+.social-links-bottom {
+  justify-content: center;
+  text-align: center;
+  font-size: 3vh;
+  width: auto;
+  height: 10vh;
+  padding-top: 20px;
+}
+
+/* EMAIL */
+
+.email-signup-section {
+  text-align: center;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+.signup-text-section {
+  margin: auto;
+  text-align: center;
+  padding: 70px 70px 40px 70px;
+}
+.signup-text {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+@media only screen and (min-width: 486px) {
+  form {
+    flex-direction: row;
+  }
+}
+
+.email-and-signup {
+  width: 300px;
+  margin: auto;
+}
+
+.email-box {
+  width: 100%;
+  margin: auto;
+  height: 73px;
+  padding: 25px;
+  margin-right: 10px;
+  border: 1px solid rgba(189, 162, 162, 0.6);
+  border-radius: 2%;
+  font-size: 18px;
+  color: rgba(189, 162, 162, 0.2);
+}
+
+.btn-signup {
+  margin: auto;
+  height: 73px;
+  /* margin-top: 20px; */
+  padding: 25px;
+  background-color: #a8a6a1;
+  color: #fff;
+  border: none;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+}
+.btn-signup:hover {
+  cursor: pointer;
+}
+
+.made-by {
+  text-align: center;
+}
+
+.links-modal-div {
+  width: 100%;
+  height: 50vh;
+  display: grid;
+  font-size: 2em;
+  grid-template-rows: repeat(12, 1fr);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.links-modal-container {
+  margin: auto;
+  height: 85vh;
+  align-items: center;
+  justify-content: center;
+  display: grid;
+  grid-template-rows: 1fr 6fr;
+  display: none;
+}
+.modal-shop-div {
+  grid-row: 7 / 8;
+}
+.modal-lookbook-div {
+  grid-row: 8 / 9;
+}
+.modal-about-div {
+  grid-row: 9/10;
+}
+.modal-contact-div {
+  grid-row: 10/11;
+}
+.modal-twitter {
+  grid-row: 3/4;
+}
+.modal-insta {
+  grid-row: 3/4;
+}
+
+/* SHIRT ANIMATION */
+
+.shirt-pic {
+  transition: transform 0.2s;
+  width: 100%;
+  height: auto;
+}
+.shirt-pic:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+}
+.clothes-container {
+  overflow: hidden;
+}
+.product-pic {
+  overflow: hidden;
+}
