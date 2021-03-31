@@ -39,5 +39,3 @@ modalContainer.addEventListener('click', function (event) {
     modalContainer.style.display = 'none';
   }
 });
-
-console.log('test');
